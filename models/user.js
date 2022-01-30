@@ -48,31 +48,5 @@ const Movie = connection.define(
   },
   { indexed: [{ unique: true, fields: ["title"] }] }
 );
-//user id, and movie id
-// const Subscription = connection.define(
-//   "Subscription",
-//   {
-//     user_id: {
-//       type: DataTypes.STRING,
-//       allowNull: false,
-//     },
-//     movie_id: {
-//       type: DataTypes.STRING,
-//       allowNull: false,
-//     },
-//     movie_title: {
-//       type: DataTypes.STRING,
-//       allowNull: false,
-//     },
-//     movie_actor: {
-//       type: DataTypes.STRING,
-//       allowNull: false,
-//     },
-//     movie_year: {
-//       type: DataTypes.STRING,
-//       allowNull: false,
-//     },
-//   },
-//   { indexed: [{ unique: true, fields: ["movie_id", "user_id"] }] }
-// );
+
 module.exports = { User, Movie };

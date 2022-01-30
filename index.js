@@ -39,13 +39,9 @@ passport.use("login", loginStrategy);
 passport.use(verifyStrategy);
 // passport.authenticate("name", callback);
 
-app.get("/", (req, res) => {
-  res.send("Hello World");
-});
 app.listen(process.env.PORT, () => {
   connection.authenticate();
   User.sync({ alter: true });
   Movie.sync({ alter: true });
-  // Subscription.sync({ alter: true });
   console.log("App is online");
 });
